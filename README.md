@@ -1,11 +1,8 @@
 # AN5506-04-F-Telnet-2026
 AN5506-04-F  Telnet 2026 administrator PASS
 AN5506-04-F  Telnet 2026 
-A real-time interactive Telnet client for GPON OLT/ONT routers (tested on `192.168.1.1`, User: `gepon`).  
-Fixes the common issue where router output only appears after you press Ctrl-C, caused by Python's `input()` blocking the async event loop on Windows.
----
-The Problem This Solves
-When managing AN5506-04-F routers via Telnet on Windows, the standard Python `telnetlib` 
+A real-time interactive Telnet client forAN5506-04-F routers (tested on `192.168.1.1`, User: `gepon`).  
+
 ---
 Requirements
 Windows (uses `msvcrt` for non-blocking keyboard input)
@@ -53,32 +50,5 @@ Type at the prompt:
 ```
 enable
 ```
-When asked for a password, press Enter (blank password).
-You will now be at `User#` — full privileged access.
-3. Run your diagnostics
-```
-show version
-show ip
-show services
-terminal length 0
-```
-> `terminal length 0` disables pagination so long outputs don't pause with `--More--`.
-4. If the router reboots mid-session
-The script detects the dropped connection and automatically reconnects:
-```
-[!] Router closed the connection.
-[*] Connecting to 192.168.1.1:23 (attempt 1)...
-[+] Connected!
-[+] Logged in. You are now at User> prompt.
-```
-No need to restart anything — just type `enable` again and continue.
----
-Keyboard shortcuts
-Key	Action
-`Enter`	Send command
-`Backspace`	Delete last character
-`Ctrl-C`	Exit the script
----
----
-License
-MIT — free to use, modify, and share.
+Donate PayPal
+paypal.me/XTechNet
