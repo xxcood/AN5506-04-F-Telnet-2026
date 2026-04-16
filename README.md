@@ -50,5 +50,4 @@ Type at the prompt:
 ```
 enable
 ```
-Donate PayPal
-paypal.me/XTechNet
+Donate paypal.me/XTechNet
